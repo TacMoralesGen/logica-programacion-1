@@ -41,7 +41,7 @@ header h1 {
 }
 
 /*-------------------------*/
-/*-------- left-nav --------*/
+/*------- left-nav --------*/
 /*-------------------------*/
 header nav ul.left-nav {
   /* position y pbm */
@@ -76,7 +76,7 @@ header nav ul.left-nav {
   }
 }
 
-header nav ul.left-nav li {
+header nav ul.left-nav li:not(.title) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,6 @@ header nav ul.left-nav li a {
   margin-bottom: 0.3rem;
   transition: all 0.18s;
   
-
   @media screen and (min-width: 768px) {
     justify-content: center;
     padding: 0 0.3rem 0 0.3rem;
@@ -126,7 +125,7 @@ header nav ul.left-nav li a {
 /*-------------------------*/
 /*--------- Title ---------*/
 /*-------------------------*/
-header a.title {
+header a.title, header li.title  {
   text-align: start;
   font-size: var(--fluid-size-navbar-title);
   padding-block: 0.5rem;
@@ -186,6 +185,7 @@ header nav ul.right-nav li.repo {
     height: 100%;
     padding: .4rem .3rem;
     transition: all 0.18s;
+    text-align: center;
 
     &:hover {
       color: var(--y-1);
